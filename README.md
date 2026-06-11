@@ -1,11 +1,8 @@
-# 🧑‍💻 GitHub Collaboration Guide
-
- 
+# GitHub Collaboration Guide
 
 This is Ulvi's complete reference for working with Git and GitHub as a team.
 
 Read it top to bottom once, then use it as a reference while you work.
-
 
 The actual tasks you need to complete are in `TASKS.md`.
 
@@ -26,11 +23,13 @@ Go through at least one of these before you begin:
 
 > Do this once at the start of the project.
 
-1. Open the repository page on GitHub.
+1. Open the repository page on GitHub: `https://github.com/ORIGINAL_OWNER/REPO_NAME`
 2. Click **Fork** in the top-right corner.
 3. Select your personal account as the destination.
 4. Open your terminal.
 5. Run `git clone https://github.com/YOUR_USERNAME/REPO_NAME.git`
+   - Replace `YOUR_USERNAME` with your GitHub username (e.g. `fatimehuseynli19`)
+   - Replace `REPO_NAME` with the repository name (e.g. `university_repo`)
 6. Run `cd REPO_NAME`
 7. Run `git remote add upstream https://github.com/ORIGINAL_OWNER/REPO_NAME.git`
 8. Run `git remote -v` — confirm you see both `origin` and `upstream`.
@@ -161,6 +160,7 @@ chore: move images into /assets folder
 
 6. Assign at least one teammate as **Reviewer**.
 7. Write `Closes #ISSUE_NUMBER` in the description to link the Issue.
+   - To find the Issue number: go to the **Issues** tab on GitHub, open your issue — the number is shown as `#3`, `#5`, etc.
 8. Click **Create Pull Request**.
 9. Move your Kanban card to **In Review**.
 
@@ -172,9 +172,9 @@ chore: move images into /assets folder
 
 > Run this every time before you start working, and whenever you see a new merge on `main`.
 
-1. Run `git fetch origin`
+1. Run `git fetch origin` — this downloads the latest changes from GitHub without affecting your work
 2. Run `git checkout your-branch-name`
-3. Run `git rebase origin/main`
+3. Run `git rebase origin/main` — this applies your commits on top of the latest main
 4. If there are no conflicts, run `git push --force-with-lease`
 5. If there are conflicts, continue to the next section.
 
@@ -228,6 +228,9 @@ git rebase origin/main
 # Something went wrong
 git rebase --abort
 ```
+
+---
+
 ## Common Mistakes
 
 ### 1. Committing directly to main
